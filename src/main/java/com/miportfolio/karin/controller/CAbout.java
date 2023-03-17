@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200") //xq se cruza con angular, desp se cambia
+//@CrossOrigin(origins = "http://localhost:4200") //xq se cruza con angular, desp se cambia
+@CrossOrigin(origins = "https://portfolio-karinsd.web.app/")
 @RequestMapping("about/") //localhost:8080/about
 public class CAbout {
     
@@ -47,7 +48,6 @@ public class CAbout {
         aboutServ.saveAbout(aboutme);
         return "Los datos fueron creados correctamente";
         //return ResponseEntity.ok().body(pers);
-    
     }
     
     //para editar
@@ -64,5 +64,6 @@ public class CAbout {
         return "Los datos fueron borrados correctamente";
         //return new ResponseEntity(HttpStatus.OK);
     }
+    
     
 }
